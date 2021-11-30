@@ -7,7 +7,7 @@ end
 
 def show
     camper =  Camper.find(params[:id])
-    render json: camper, serializer: CamperActivitySerializer
+    render json: camper,include:['activities']
   end
 
 
